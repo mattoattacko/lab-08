@@ -4,7 +4,7 @@ import storage from '../lib/storage/memory.js';
 // import storage from 'fileStorage';
 // import storage from 'mongostuff';
 
-
+// everything here in class Notes is a static method
 class Notes {
 
   static findOne(id) {

@@ -21,7 +21,7 @@ router.get('/api/v1/notes', (request,response,next) => {
         count: data.length,
         results: data,
       };
-      sendJSON(output, response);
+      sendJSON(output, response); 
     })
     .catch( next );
 });

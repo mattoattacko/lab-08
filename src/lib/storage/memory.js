@@ -13,7 +13,8 @@ storage.find = query => {
     if ( id && database[id] ) {
       resolve(database[id]);
     }
-    else {
+    //if we don't have an id, we will loop over the database, and our db is an array of objects
+    else { 
       const results = Object.keys(database).map( key => {
         return database[key];
       });
@@ -36,6 +37,7 @@ storage.delete = id => {
   });
 };
 
+// object.assign will create an object
 storage.save = (data) => {
   return new Promise( (resolve,reject) => {
     data._id = data._id || uuid();
